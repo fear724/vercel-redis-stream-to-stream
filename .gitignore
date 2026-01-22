@@ -22,3 +22,10 @@ lerna-debug.log*
 # temp directory
 .temp
 .tmp
+
+# Vercel deployment files
+node_modules
+.env
+.vercel
+.env*.local
+pnpm-lock.yaml
