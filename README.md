@@ -17,19 +17,19 @@ You can choose from one of the following two methods to use this repository:
 
 Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/examples/tree/main/solutions/express&project-name=express&repository-name=express)
-
 ### Clone and Deploy
 
 ```bash
-git clone https://github.com/vercel/examples/tree/main/solutions/express
+git clone [repository ...]
 ```
 
 Install the dependencies:
 
 ```bash
 pnpm install
+```
 
+```bash
 pnpm build
 ```
 
@@ -58,15 +58,12 @@ The app includes Redis stream functionality. Set the following environment varia
 
 ## API Endpoints
 
-- `/`: Home page
-- `/about`: About page
-- `/api-data`: Sample JSON API
 - `/healthz`: Health check
-- `/redis-stream`: Read from Redis stream (GET, query params: `stream`, `lastId`)
-- `/api/consumer`: Manual trigger for the consumer (GET)
+- `/api/consumer`: Manual trigger for the consumer (GET) for crone job
 
 ## Consumer
 
-The Redis stream consumer runs automatically every 5 minutes via Vercel cron. It processes pending messages in the consumer group and acknowledges them.
+The Redis stream consumer runs automatically every 1 hour via Vercel cron. 
+It processes pending messages in the consumer group and acknowledges them.
 
 You can also manually trigger the consumer by visiting `/api/consumer`.
