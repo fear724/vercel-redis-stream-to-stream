@@ -1,12 +1,13 @@
 # Express.js on Vercel
 
-Basic Express.js + Vercel example that serves html content, JSON data and simulates an api route. Includes Redis stream reading and a serverless consumer that runs on Vercel cron.
+Basic Express.js + Vercel example that serves html content, JSON data and simulates an api route. 
+Includes Redis stream reading and a serverless consumer that runs on Vercel cron.
 
 ## Features
 
 - Express.js web server
 - Redis stream reading API endpoint
-- Serverless Redis stream consumer (runs every 5 minutes via Vercel cron)
+- Serverless Redis stream consumer (runs every 1 hour via Vercel cron)
 - TypeScript support
 
 ## How to Use
